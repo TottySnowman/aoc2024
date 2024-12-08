@@ -46,16 +46,16 @@ func value(expectedResult int, numbers []int) int {
 		}
 		return 0
 	}
-  plusValue := numbers[0] + numbers[1] 
-  multValue := numbers[0] * numbers[1] 
+	plusValue := numbers[0] + numbers[1]
+	multValue := numbers[0] * numbers[1]
 
 	tempResP := value(expectedResult, append([]int{plusValue}, numbers[2:]...))
-  if tempResP != 0 {
+	if tempResP != 0 {
 		return tempResP
 	}
 
 	tempResM := value(expectedResult, append([]int{multValue}, numbers[2:]...))
-  if tempResM != 0 {
+	if tempResM != 0 {
 		return tempResM
 	}
 	return 0
